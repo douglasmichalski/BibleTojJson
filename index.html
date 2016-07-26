@@ -19,12 +19,11 @@
                 </div>
                 <h1>Interpretador de strings</h1>
                 <div class="form-group">
-                    <label for="chapters">Versiculo</label>
+                    <label for="chapters">Cole Capitulo</label>
                     <textarea class="form-control" rows="3" id="chapter"></textarea>
                 </div>
-                <button onclick="verificadString()" class="btn btn-primary">Adicionar Versiculo</button>
+                <button onclick="verificadString()" class="btn btn-primary">Converter Json</button>
                 <hr>
-                <button onclick="copyText()" class="btn btn-danger">Copy Text</button>
                 <hr> 
                 <div id="showdata"></div>
                 <div id="demo"></div>
@@ -32,14 +31,21 @@
             </div>
 
             <div class="col-md-6">
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for="versicle">Versiculo</label>
                     <textarea onchange="changedText()" class="form-control" rows="3" id="versicle"></textarea>
                 </div>
                 <button onclick="addVersicle()" class="btn btn-primary">Adicionar Versiculo</button>
+                <hr>-->
+                <div class="form-group">
+                    <label for="versicle">Resultado</label>
+                    <textarea  class="form-control" rows="3" id="resultVersicle"></textarea>
+                </div>
+                <button class="btn btn-primary" data-clipboard-action="copy" data-clipboard-target="#resultVersicle">Copiar</button>
             </div>
         </div>
     </div>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>    
 <script src="myScript.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>       

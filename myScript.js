@@ -7,6 +7,9 @@ var select = document.getElementById('listChapters');
 var texto = document.getElementById('versicle');
 var textVersicle = "";
 
+new Clipboard('.btn');
+
+
 
 //algoritmo para o interpretador
 var bigtext = document.getElementById('chapter');
@@ -58,17 +61,21 @@ function verificadString(){
 
                 if(countVersicles > 1){
                     jsonBible[capituloAtual-1].versicles.push({versicle : countVersicles-1, text : textVersicle});
-                    document.getElementById("demo").innerHTML = JSON.stringify(jsonBible);
+                    //document.getElementById("demo").innerHTML = JSON.stringify(jsonBible);
                 }
                 textVersicle = ""; //reseta o versisculo toda vez que um numero é encontrado;
             }
              
         } else {
-            textVersicle += char;
+            if(isNumber(char) == false){
+                textVersicle += char;
+            }     
         }
+
         if(i+1 == sizeText){
             jsonBible[capituloAtual-1].versicles.push({versicle : countVersicles, text : textVersicle});
-            document.getElementById("demo").innerHTML = JSON.stringify(jsonBible);
+            //document.getElementById("demo").innerHTML = JSON.stringify(jsonBible);
+            document.getElementById("resultVersicle").innerHTML =  JSON.stringify(jsonBible);
         }
     }
     
