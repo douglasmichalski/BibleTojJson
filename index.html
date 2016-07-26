@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Generated Versicles</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 id="titleChapter">Nada Selecionado</h1>
+                <div class="form-group">
+                    <button onclick="addChapther()" class="btn btn-success">New Chapter</button>
+                </div>
+                <div class="form-group">
+                    <label for="listChapters">Capitulos</label>
+                    <select class="form-control" id="listChapters" onchange="chagedChapiters(this)">
+                    </select>
+                </div>
+                <h1>Interpretador de strings</h1>
+                <div class="form-group">
+                    <label for="chapters">Versiculo</label>
+                    <textarea class="form-control" rows="3" id="chapter"></textarea>
+                </div>
+                <button onclick="verificadString()" class="btn btn-primary">Adicionar Versiculo</button>
+                <hr>
+                <button onclick="copyText()" class="btn btn-danger">Copy Text</button>
+                <hr> 
+                <div id="showdata"></div>
+                <div id="demo"></div>
+                <hr>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="versicle">Versiculo</label>
+                    <textarea onchange="changedText()" class="form-control" rows="3" id="versicle"></textarea>
+                </div>
+                <button onclick="addVersicle()" class="btn btn-primary">Adicionar Versiculo</button>
+            </div>
+        </div>
+    </div>
+<script src="myScript.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>       
+</body>
+</html> 
